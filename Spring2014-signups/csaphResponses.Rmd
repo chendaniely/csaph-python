@@ -3,7 +3,7 @@ HI!
 
 ```{r}
 # load data
-responses<- read.delim("~/Desktop/csaph/CSAPH Modelling Workshop (Responses) - Form Responses.tsv", dec=",")
+responses<- read.delim("~/Desktop/CSAPH Modelling Workshop (Responses) - Form Responses.tsv", dec=",")
 
 drops <- c("Which.certificate.program.are.you.pursuing.1", "X")
  
@@ -31,4 +31,7 @@ signed.up <- ggplot(responses2, aes(x = as.factor(value), fill = variable)) + ge
 signed.up
 ```
 
+```{r fig.width=7, fig.height=6}
+programming <- ggplot(responses, aes(x = as.factor("From.a.scale.of.1.to.5..how.proficient.are.you.in.computer.programming."))) + geom_bar
+```
 
