@@ -4,7 +4,7 @@ HI!
 
 ```r
 # load data
-responses <- read.delim("~/Desktop/csaph/CSAPH Modelling Workshop (Responses) - Form Responses.tsv", 
+responses <- read.delim("~/Desktop/CSAPH Modelling Workshop (Responses) - Form Responses.tsv", 
     dec = ",")
 
 drops <- c("Which.certificate.program.are.you.pursuing.1", "X")
@@ -58,5 +58,16 @@ signed.up
 ```
 
 ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
+
+
+
+```r
+programming <- ggplot(responses, aes(x = as.factor("From.a.scale.of.1.to.5..how.proficient.are.you.in.computer.programming."))) + 
+    geom_bar
+```
+
+```
+## Error: Don't know how to add geom_bar to a plot
+```
 
 
