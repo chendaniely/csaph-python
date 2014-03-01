@@ -26,12 +26,23 @@ signed.up <- ggplot(responses2, aes(x = as.factor(value), fill = variable)) + ge
 ```
 
 
-
 ```{r fig.width=7, fig.height=6}
 signed.up
 ```
-
+# Self-rated programming proficiency
 ```{r fig.width=7, fig.height=6}
-programming <- ggplot(responses, aes(x = as.factor("From.a.scale.of.1.to.5..how.proficient.are.you.in.computer.programming."))) + geom_bar
+programming <- ggplot(responses, aes(x = as.factor(responses$"From.a.scale.of.1.to.5..how.proficient.are.you.in.computer.programming."))) + geom_bar(stat="bin")
+programming
 ```
 
+# Self-rated quant research proficiency
+```{r fig.width=7, fig.height=6}
+quant <- ggplot(responses, aes(x = as.factor(responses$"From.a.scale.of.1.to.5..how.proficient.are.you.in.quantitative.research.methods."))) + geom_bar(stat="bin")
+quant
+```
+
+# Self-rated qual research proficiency
+```{r fig.width=7, fig.height=6}
+qual <- ggplot(responses, aes(x = as.factor(responses$"From.a.scale.of.1.to.5..how.proficient.are.you.in.qualitative.research.methods."))) + geom_bar(stat="bin")
+qual
+```

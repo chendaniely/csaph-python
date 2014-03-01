@@ -52,22 +52,41 @@ signed.up <- ggplot(responses2, aes(x = as.factor(value), fill = variable)) +
 
 
 
-
 ```r
 signed.up
 ```
 
 ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
 
-
+# Self-rated programming proficiency
 
 ```r
-programming <- ggplot(responses, aes(x = as.factor("From.a.scale.of.1.to.5..how.proficient.are.you.in.computer.programming."))) + 
-    geom_bar
+programming <- ggplot(responses, aes(x = as.factor(responses$From.a.scale.of.1.to.5..how.proficient.are.you.in.computer.programming.))) + 
+    geom_bar(stat = "bin")
+programming
 ```
 
-```
-## Error: Don't know how to add geom_bar to a plot
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
+
+
+# Self-rated quant research proficiency
+
+```r
+quant <- ggplot(responses, aes(x = as.factor(responses$From.a.scale.of.1.to.5..how.proficient.are.you.in.quantitative.research.methods.))) + 
+    geom_bar(stat = "bin")
+quant
 ```
 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+
+
+# Self-rated qual research proficiency
+
+```r
+qual <- ggplot(responses, aes(x = as.factor(responses$From.a.scale.of.1.to.5..how.proficient.are.you.in.qualitative.research.methods.))) + 
+    geom_bar(stat = "bin")
+qual
+```
+
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
 
